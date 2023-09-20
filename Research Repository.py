@@ -1,12 +1,36 @@
 import turtle
+import random
 
-turtle.color("yellow")
-turtle.Screen().bgcolor("black")
+# Function to generate a random color
+def random_color():
+    colors = ["red", "green", "blue", "orange", "purple", "pink", "cyan", "magenta", "yellow"]
+    return random.choice(colors)
 
-turtle.width(12)
+# Create a Turtle screen
+screen = turtle.Screen()
+screen.bgcolor("black")
 
-for i in range(5):
-    turtle.forward(150)
-    turtle.right(144)
+# Create a Turtle object
+t = turtle.Turtle()
+t.speed(0)  # Set the turtle speed to maximum
+t.width(1)  # Decrease the width of the stars
 
-turtle.done()
+# Get screen dimensions
+screen_width = screen.window_width()
+screen_height = screen.window_height()
+
+# Loop to draw lots of stars across the entire screen
+for _ in range(500):  # Adjust the number of stars as needed
+    t.penup()
+    x = random.randint(-screen_width // 2, screen_width // 2)
+    y = random.randint(-screen_height // 2, screen_height // 2)
+    t.goto(x, y)
+    t.pendown()
+    t.color(random_color())
+    
+    for _ in range(5):
+        t.forward(10)  # Adjust the star size as needed
+        t.right(144)
+
+# Close the Turtle graphics window on click
+screen
