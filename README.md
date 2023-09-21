@@ -10,3 +10,5 @@
 9 - The pen is lowered (t.pendown()) to start drawing, and a random color is assigned to the star using t.color(random_color()).
 10 - Another loop is used to draw each star as a five-pointed star. The turtle moves forward by 10 units to draw a leg of the star (t.forward(10)) and then turns right by 144 degrees (t.right(144)) to create the next leg. This is repeated five times to complete the star.
 11- Finally, the code keeps the Turtle graphics window open until you click inside it to close it.
+references - https://www.tutorialspoint.com/turtle-programming-in-python
+reference - https://www.youtube.com/watch?v=GoAl_Vh9U38
